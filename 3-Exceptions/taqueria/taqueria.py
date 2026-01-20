@@ -10,19 +10,18 @@ menu = {
 		"Tortilla Salad": 8.00,
 	}
 
-order_list = []
+price_list = []
+ordering = True
 
-while True:
+while ordering:
     try:
         order = input("What item would you like? ")
     except EOFError:
+        ordering = False
         break
-order_list.append(order)
-for order in order_list:
     price = menu[order]
+    price_list.append(price)
     
-total_price = 0
-for price in price_list:
-    total_price = total_price + price
+total_price = sum(price_list)
 print(f"The total price of your order is {total_price}.")
 
