@@ -42,20 +42,13 @@ def num_mid_check(s):
     char_position = 0
     for char in s:
         if char in numbers:
-            char_position = char.find(numbers)
             if s[char_position] == s[-1]:
                 return True
             next_char = char_position + 1
             break
-
-    if next_char in alphabet:
+        else:
+            char_position = char_position + 1
+    if s[next_char] in alphabet:
         return False
-
-#    if s[index] == s[-1]:
-#        return True
-#    if s[index] in alphabet:
-#        return False
-#    else:
-#        return True
 
 main()
