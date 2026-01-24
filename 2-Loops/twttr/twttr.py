@@ -1,5 +1,3 @@
-#get a message, remove vowels, print
-
 vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
 msg = input("Message: ")
 for letter in msg:

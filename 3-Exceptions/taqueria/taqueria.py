@@ -11,17 +11,23 @@ menu = {
 	}
 
 price_list = []
+order_list = []
 ordering = True
 
 while ordering:
+    # try and except loop
     try:
         order = input("What item would you like? ")
-    except EOFError:
-        ordering = False
-        break
-    price = menu[order]
-    price_list.append(price)
+        # adds the order to the designated list immediately
+        order_list.append(order)
+    except EOFError: # error that appears when you use ctrl+z (on windows), ctrl+d (on mac)
+        ordering = False # ends the loop
+        break # terminates it as well
     
-total_price = sum(price_list)
+for order in order_list:
+	price = menu[order] # gets the key of the value in the dict
+	price_list.append(price) # immediately appends it to a new list
+    
+total_price = sum(price_list) # sum method adds ints in a list
 print(f"The total price of your order is {total_price}.")
 

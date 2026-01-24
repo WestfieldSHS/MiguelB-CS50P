@@ -1,4 +1,5 @@
 greeting = input("Enter a greeting: ")
+# gets rid of spaces pre/oceeding the string
 greeting = greeting.strip()
 greeting = greeting.lower()
 if greeting == "hello":

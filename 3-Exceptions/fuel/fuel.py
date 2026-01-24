@@ -1,9 +1,8 @@
 fraction = input("Input a fraction (x/y): ")
 fraction = fraction.replace("/", " ")
 x, y = fraction.split(" ")
-x = int(x)
-y = int(y)
-decimal = 100*(x/y)
+x, y = int(x), int(y) # you can do this apparently
+decimal = 100*(x/y) # creates a decimal from the fraction
 if decimal >= 99:
     print("Your fuel tank is fuel.")
 elif decimal <= 1:
