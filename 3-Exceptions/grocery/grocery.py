@@ -1,5 +1,3 @@
-# uncompleted
-
 grocery_list = []
 
 while True:
@@ -9,8 +7,9 @@ while True:
         break
     grocery_list.append(item)
 
-from collections import Counter
-counts = Counter(grocery_list)
+unique_list = set(grocery_list) # set() removes duplicate items in a list
 
-for item, count in counts:
-    print(f"{count}: {item}")
+# cycles thru unique_list while counting grocery_list
+for item in unique_list:
+    count = grocery_list.count(item)
+    print(f"[{count}] {item}")

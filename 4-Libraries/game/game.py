@@ -2,7 +2,7 @@ import random
 
 def main():
     maxima = positive_checker("Input")
-    number_to_guess = random.randint(1, maxima)
+    number_to_guess = random.randint(1, maxima) # inclusive range
     guess_counter = guess_checker(number_to_guess)
     print(f"It took {guess_counter} guesses.")
 
