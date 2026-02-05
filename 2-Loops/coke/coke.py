@@ -9,9 +9,13 @@ while price_check == False:
         # gets rid of cent before turning it into an integer
         insert_coin = int(insert_coin.replace("c", ""))
         price_match = price_match - insert_coin
-        print(f"Price remaining: {price_match}")
         if price_match <= 0:
+            change = price_match * -1
             price_check = True
+        else:
+            print(f"Price remaining: {price_match}")
     else:
         print("Input an accepted coin.")
 print("Here's your coke.")
+if change: 
+    print(f"Here is your change: {change}c.")
