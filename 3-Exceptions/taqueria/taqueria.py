@@ -14,6 +14,8 @@ price_list = []
 order_list = []
 ordering = True
 
+print(menu)
+print()
 while ordering:
     # try and except loop
     try:
