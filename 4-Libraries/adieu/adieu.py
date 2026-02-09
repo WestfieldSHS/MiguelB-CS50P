@@ -7,7 +7,11 @@ while True:
     except EOFError:
         break
 
-n = len(name_list)
+length = len(name_list)
+n = 0
 
 while True:
+    for name in name_list:
+        print(name_list[n:])
+        n += 1
     break
