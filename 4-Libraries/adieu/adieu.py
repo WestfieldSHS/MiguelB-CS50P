@@ -1,4 +1,5 @@
 name_list = []
+string = "Adieu Adieu to "
 
 while True:
     try:
@@ -10,8 +11,9 @@ while True:
 length = len(name_list)
 n = 0
 
-while True:
-    for name in name_list:
-        print(name_list[n:])
-        n += 1
-    break
+for name in name_list:
+    if name == name_list[0]:
+        string = string + f"{name}"
+    if name == name_list[-1]:
+        string = string + f""
+    print(string)
