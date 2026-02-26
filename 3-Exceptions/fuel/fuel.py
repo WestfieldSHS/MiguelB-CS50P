@@ -13,10 +13,12 @@ while True:
     except ValueError:
         print("Error! Please input integers.")
     else:
-        if 0 < x < y:
-            break
+        if x < 0:
+            print("Numerator must be positive")
+        elif x > y:
+            print("Numerator must be less than or equal to the denominator")
         else:
-            print("Numerator must be positive.")
+            break
 
 if decimal >= 99:
     print("Your fuel tank is fuel.")

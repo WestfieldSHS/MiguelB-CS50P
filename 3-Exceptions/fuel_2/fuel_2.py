@@ -3,6 +3,7 @@ def main():
         x, y = input_fraction()
         x, y = integer_convert(x, y)
         decimal = decimal_convert(x, y)
+        decimal_check(decimal)
         read_fuel(decimal)
 
 def input_fraction():
@@ -16,16 +17,23 @@ def integer_convert(x, y):
         x, y = int(x), int(y) # you can do this apparently
     except ValueError:
             print("Error! Please input integers.")
-    if 0 < x < y:
-        return x, y
+    return x, y
 
 def decimal_convert(x, y):
-    try: # are u allowed to indent try/except like this
+    try:
         decimal = 100*(x/y) # creates a decimal from the fraction
     except ZeroDivisionError:
         print("Error! Denominator cannot be equal to zero.")
+        main()
     else:
         return decimal
+
+def decimal_check(decimal):
+    if decimal < 0:
+        print("Decimal must be positive")
+        main()
+    else:
+        pass
 
 def read_fuel(decimal):
     if decimal >= 99:
