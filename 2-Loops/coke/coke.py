@@ -10,7 +10,7 @@ while price_check == False:
         insert_coin = int(insert_coin.replace("c", ""))
         price_match = price_match - insert_coin
         if price_match <= 0:
-            change = price_match * -1
+            change = abs(price_match)
             price_check = True
         else:
             print(f"Price remaining: {price_match}")
